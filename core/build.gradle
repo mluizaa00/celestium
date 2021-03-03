@@ -16,6 +16,12 @@ dependencies {
     implementation group: 'io.netty', name: 'netty-all', version: '4.1.59.Final'
 
     /*
+    LOGGING
+     */
+    implementation 'com.google.flogger:flogger:0.5.1'
+    implementation 'com.google.flogger:flogger-system-backend:0.5.1'
+
+    /*
     ANNOTATION PROCESSOR
      */
     compileOnly 'org.projectlombok:lombok:1.18.18'
