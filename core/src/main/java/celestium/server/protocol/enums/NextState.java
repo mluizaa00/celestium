@@ -1,4 +1,4 @@
-package com.celestium.protocol.enums;
+package celestium.server.protocol.enums;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
