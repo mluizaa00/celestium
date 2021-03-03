@@ -1,6 +1,6 @@
-package celestium.server.protocol.packets;
+package com.celestium.server.protocol.packets;
 
-import celestium.server.protocol.enums.NextState;
+import com.celestium.server.protocol.enums.NextState;
 import lombok.Data;
 
 @Data

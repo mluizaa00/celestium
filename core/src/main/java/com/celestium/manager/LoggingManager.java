@@ -1,4 +1,4 @@
-package celestium.manager;
+package com.celestium.manager;
 
 import com.google.common.flogger.FluentLogger;
 import lombok.Getter;

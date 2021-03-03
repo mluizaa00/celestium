@@ -1,6 +1,6 @@
-package celestium.server;
+package com.celestium.server;
 
-import celestium.manager.LoggingManager;
+import com.celestium.manager.LoggingManager;
 import com.google.common.flogger.FluentLogger;
 import com.google.common.util.concurrent.ThreadFactoryBuilder;
 import com.sun.istack.internal.Nullable;
@@ -38,7 +38,7 @@ public class ProtocolConnection {
                 LOGGER.atInfo().log("Epoll not available. Using default channel type instead.");
             }
 
-            ChannelInitializer<Channel> channelInitializer = new ChannelInitializer<Channel>() {
+            final ChannelInitializer<Channel> channelInitializer = new ChannelInitializer<Channel>() {
                 @Override
                 protected void initChannel(Channel channel) {
                     try {
@@ -50,7 +50,7 @@ public class ProtocolConnection {
             };
 
             /*
-            Creates a new instance of the server and connects it to the adress and port.
+            Creates a new instance of the server and connects it to the address and port.
              */
             final ServerBootstrap bootstrap = new ServerBootstrap()
                 .channel(channelType)
@@ -71,6 +71,5 @@ public class ProtocolConnection {
             );
         }
     }
-
 
 }

@@ -1,4 +1,4 @@
-package celestium.server.protocol;
+package com.celestium.server.protocol;
 
 import lombok.Data;
 

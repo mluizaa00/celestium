@@ -1,4 +1,4 @@
-package celestium.server;
+package com.celestium.server;
 
 import io.netty.buffer.ByteBuf;
 import lombok.AllArgsConstructor;
