@@ -2,6 +2,9 @@ package com.celestium.server.protocol;
 
 import lombok.Data;
 
+/**
+ * Information contained by a packet.
+ */
 @Data
 public class PacketInfo {
 

@@ -1,8 +1,11 @@
-package com.celestium.server;
+package com.celestium.server.protocol;
 
 import io.netty.buffer.ByteBuf;
 import lombok.AllArgsConstructor;
 
+/**
+ * Utils for reading and writing VarInt and VarLong.
+ */
 @AllArgsConstructor
 public class ProtocolBuffer {
 

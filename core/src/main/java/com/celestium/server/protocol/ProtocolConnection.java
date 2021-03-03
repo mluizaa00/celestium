@@ -1,4 +1,4 @@
-package com.celestium.server;
+package com.celestium.server.protocol;
 
 import com.celestium.manager.LoggingManager;
 import com.google.common.flogger.FluentLogger;

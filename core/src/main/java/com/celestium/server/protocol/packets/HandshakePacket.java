@@ -1,8 +1,11 @@
 package com.celestium.server.protocol.packets;
 
-import com.celestium.server.protocol.enums.NextState;
+import com.celestium.server.protocol.network.NextState;
 import lombok.Data;
 
+/**
+ * Information contained on Handshake packet received.
+ */
 @Data
 public class HandshakePacket {
 

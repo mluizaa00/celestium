@@ -1,8 +1,11 @@
-package com.celestium.server.protocol.enums;
+package com.celestium.server.protocol.network;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 
+/**
+ * Field received only on Handshake packet, should return STATUS or LOGIN.
+ */
 @Getter
 @AllArgsConstructor
 public enum NextState {
