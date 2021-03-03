@@ -69,6 +69,15 @@ public class JacksonAdapter {
         return null;
     }
 
+    /**
+     * Adds a ArrayList formatted to a node.
+     *
+     * @param node ObjectNode
+     * @param list ArrayList
+     * @param value String
+     *
+     * @return ObjectNode
+     */
     public ObjectNode addArrayToNode(final ObjectNode node, final ArrayList<?> list, final String value)  {
         final ArrayNode arrayNode = factory.valueToTree(list);
         node.putArray(value).addAll(arrayNode);
@@ -76,6 +85,14 @@ public class JacksonAdapter {
         return node;
     }
 
+    /**
+     * Gets ArrayList from Node.
+     *
+     * @param node ObjectNode
+     * @param value String
+     *
+     * @return ArrayList<T>
+     */
     public ArrayList<?> getArrayFromNode(final ObjectNode node, final String value)  {
         return factory.convertValue(node.get(value), ArrayList.class);
     }
