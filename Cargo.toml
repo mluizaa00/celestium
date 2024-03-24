@@ -7,3 +7,5 @@ edition = "2021"
 
 [dependencies]
 tokio = { version = "1", features = ["full"] }
+mc-varint = { version = "0.1.1"}
+dotenv = "0.15.0"

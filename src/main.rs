@@ -1,14 +1,22 @@
 use tokio::net::{TcpListener, TcpStream};
 use tokio::io::AsyncReadExt;
+use dotenv::dotenv;
 
 #[tokio::main]
 async fn main() -> Result<(), Box<dyn std::error::Error>> {
-    let listener = TcpListener::bind("127.0.0.1:8080").await?;
-    println!("Server listening on port 8080...");
+    dotenv().ok();
+
+    let host = std::env::var("HOST").expect("Unable to find host in environment variables.");
+    let port = std::env::var("PORT").expect("Unable to find port in environment variables.");
+
+    let address = format!("{}:{}", host, port);
+    let listener = TcpListener::bind(address).await?;
+
+    println!("Server listening on host {} and port {}...", host, port);
 
     loop {
         let (stream, _) = listener.accept().await?;
-        println!("New connection: {:?}", stream.peer_addr());
+        println!("New connection with address: {:?}", stream.peer_addr());
 
         tokio::spawn(async move {
             handle_client(stream).await;
